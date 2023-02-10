@@ -1,0 +1,625 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Remove the underline from all links */
+a {
+  text-decoration: none;
+}
+
+/* Make text un selectable */
+h1,
+p {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100vh;
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  background: url(../assets/PHB_background_texture.png) no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Macondo Swash Caps", cursive;
+}
+
+.navbar {
+  height: 95px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../assets/PHB_background_texture.png);
+  background-color: #f5e1da;
+  border-bottom: 3px solid #9C2B1B;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+.navbar .navbar__container {
+  display: flex;
+  justify-content: space-evenly;
+  height: 95px;
+  z-index: 1;
+  width: 100%;
+  max-width: 1250px;
+}
+.navbar .navbar__container .logo {
+  margin-top: 13px;
+  max-width: 133px;
+  max-height: 66px;
+}
+.navbar .navbar__container .logo:hover img {
+  width: 95%;
+}
+.navbar .navbar__container a img {
+  height: 100%;
+  padding: 1em auto;
+}
+.navbar .navbar__container .Mobile-Menu {
+  height: 90%;
+  padding: 3em auto;
+  width: 55%;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.navbar .navbar__container .Mobile-Menu:hover {
+  width: 50%;
+  transition: all 0.5s ease-in-out;
+}
+
+.hero-image {
+  margin-top: 41px;
+  margin-inline: 57px;
+}
+
+.hero {
+  margin-top: 130px;
+}
+
+.navbar__menu {
+  background-color: #DFCEA3;
+  display: grid;
+  grid-template-columns: auto;
+  margin-top: 10px;
+  width: 100%;
+  position: absolute;
+  opacity: 0;
+  top: -1000px;
+  transition: 0.5s ease;
+  height: 95vh;
+  z-index: -1;
+  border-radius: 48px;
+  transition: all 0.5s ease-in-out;
+}
+.navbar__menu .closeNAV {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-right: 2.5em;
+  margin-top: 1.8em;
+  cursor: pointer;
+  transition: transform 0.2s; /* this will make the transition smooth */
+}
+.navbar__menu .closeNAV:hover {
+  transform: scale(1.3); /* this will make the image grow by 30% */
+}
+.navbar__menu li {
+  margin: 1em;
+  display: inline-block;
+}
+.navbar__menu li a {
+  color: #9C2B1B;
+  text-align: center;
+  padding: 0.8rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.navbar__menu li a:hover {
+  font-size: 1.5rem;
+  text-decoration: underline;
+  transition: all 0.3s ease-in-out;
+}
+
+.open-nav {
+  top: 0;
+  opacity: 1;
+  z-index: 9999;
+  transition: all 0.5s ease-in-out;
+}
+
+@media only screen and (min-width: 920px) {
+  .Mobile-Menu, .closeNAV {
+    display: none;
+  }
+  .navbar__menu {
+    background: none;
+    display: flex;
+    justify-content: space-around;
+    width: 700px;
+    position: unset;
+    height: 40px;
+    opacity: 1;
+    z-index: 9999;
+    transition: all 0.5s ease-in-out;
+  }
+  .navbar__menu li {
+    margin: 1em;
+    display: inline-block;
+  }
+  .navbar__menu li a {
+    color: #9C2B1B;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    transition: text-shadow 0.2s ease-in-out;
+  }
+  .navbar__menu li a:hover {
+    font-size: 1.8rem;
+    text-decoration: underline;
+    text-shadow: 3px 4px 7px rgba(81, 67, 21, 0.8);
+    transition: all 0.3s ease-in-out;
+  }
+  .hero {
+    margin-top: 100px;
+  }
+  .hero-image {
+    max-width: 60%;
+    margin: 0 auto;
+    padding-top: 1.8em;
+  }
+}
+.STORY {
+  display: flex;
+  place-content: center;
+  place-items: center;
+  min-height: 100vh;
+  margin: 231px auto;
+}
+
+.story__container {
+  position: relative;
+  display: flex;
+  place-content: center;
+  place-items: center;
+}
+
+.card {
+  position: relative;
+  width: 675px;
+  height: 350px;
+  margin: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transition: 0.5s;
+  background: linear-gradient(45deg, #1a2f3f, #7094ce);
+  box-shadow: 5px 5px 10px #888888;
+}
+.card:hover .card__content {
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+}
+.card:hover .pyatt {
+  left: 75%;
+  height: 500px;
+}
+
+.pyatt {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 400px;
+  transition: 0.5s;
+}
+
+.card__content {
+  position: relative;
+  width: 50%;
+  left: 20;
+  padding: 20px 20px 20px 40px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+.card__content h2 {
+  color: whitesmoke;
+  text-transform: uppercase;
+  font-size: 2.2em;
+  line-height: 1em;
+  margin-bottom: 16px;
+}
+.card__content p {
+  color: whitesmoke;
+  font-size: 18px;
+}
+.card__content p, .card__content a {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.card__content a {
+  position: relative;
+  color: #111;
+  background: #fff;
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 25px;
+}
+
+@media only screen and (max-width: 991px) {
+  .STORY {
+    overflow-x: hidden;
+  }
+  .card {
+    width: auto;
+    max-width: 489px;
+    align-items: flex-start;
+  }
+  .card:hover.card {
+    height: 689px;
+    margin-bottom: 32px;
+  }
+  .card:hover.pyatt {
+    left: 55%;
+  }
+  .card .card__content {
+    width: 100%;
+    left: 0;
+    padding: 40px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .STORY {
+    margin-top: 100px;
+  }
+  .story__container {
+    flex-direction: column;
+  }
+  .story__container .card {
+    margin: 40px 20px;
+  }
+}
+@media only screen and (max-width: 556px) {
+  .card:hover.card {
+    height: 725px;
+  }
+  .card:hover.pyatt img {
+    left: 10%;
+    height: 100px;
+    width: 30px;
+  }
+  .card .card__content {
+    padding: 30px;
+  }
+}
+@media only screen and (max-width: 483px) {
+  .card:hover.card {
+    height: 805px;
+  }
+  .card:hover.pyatt {
+    left: 55%;
+    height: 215px;
+  }
+}
+.BROCC {
+  height: 100%;
+  margin-top: 181px;
+  margin-inline: 55px;
+  display: grid;
+  place-content: center;
+  place-items: center;
+  grid-template-columns: auto;
+}
+
+.broccIMG {
+  max-width: 1200px;
+  max-height: 732px;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  /*  padding: 47px 80px; */
+  padding: 25px 20px;
+  border-radius: 25px;
+  background: #293D11;
+  box-shadow: 5px 5px 10px #888888;
+}
+.broccIMG img {
+  border-radius: 10px;
+}
+
+.brocc__content {
+  font-family: "Goudy Bookletter 1911", serif;
+  background-color: #293D11;
+  margin: 16px;
+  padding: 18px;
+  color: whitesmoke;
+  border-radius: 10px;
+  text-transform: capitalize;
+  max-width: 1015px;
+  min-width: 300px;
+  display: inline-block;
+  box-shadow: 5px 5px 10px #888888;
+}
+.brocc__content h2 {
+  text-align: center;
+  font-size: 24px;
+}
+.brocc__content p {
+  text-align: left;
+  font-size: 16px;
+}
+
+@media only screen and (min-width: 920px) {
+  .broccIMG {
+    padding: 47px 65px;
+    max-width: 70%;
+  }
+  .brocc__content h2 {
+    font-size: 32px;
+    text-align: center;
+  }
+  .brocc__content p {
+    font-size: 18px;
+    text-align: left;
+  }
+}
+.KAEL {
+  height: 100%;
+  margin-top: 181px;
+  margin-inline: 172px;
+  display: grid;
+  place-content: center;
+  place-items: center;
+  grid-template-columns: auto;
+}
+
+.kaelIMG {
+  display: flex;
+  place-content: center;
+  place-items: center;
+  border: 2px solid black;
+  box-shadow: 5px 5px 10px #888888;
+}
+
+.kael__content {
+  font-family: "Goudy Bookletter 1911", serif;
+  background-color: #10141c;
+  margin: 16px;
+  padding: 18px;
+  color: whitesmoke;
+  border-radius: 10px;
+  text-transform: capitalize;
+  max-width: 1015px;
+  min-width: 300px;
+  display: inline-block;
+  box-shadow: 5px 5px 10px #888888;
+}
+.kael__content h2 {
+  text-align: center;
+  font-size: 24px;
+}
+.kael__content p {
+  text-align: left;
+  font-size: 16px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+@media only screen and (min-width: 920px) {
+  .kaelIMG {
+    max-width: 50%;
+  }
+  .kael__content h2 {
+    font-size: 32px;
+    text-align: center;
+  }
+  .kael__content p {
+    font-size: 18px;
+    text-align: left;
+  }
+}
+.CU {
+  height: 100%;
+  margin-top: 181px;
+  margin-inline: 172px;
+  display: grid;
+  place-content: center;
+  place-items: center;
+  grid-template-columns: auto;
+}
+
+.cuIMG {
+  display: flex;
+  place-content: center;
+  place-items: center;
+  border: 8px solid #0034BA;
+  box-shadow: 5px 5px 10px #888888;
+}
+
+.cuchulainn__content {
+  font-family: "Goudy Bookletter 1911", serif;
+  background-color: #889BD6;
+  margin: 16px;
+  padding: 18px;
+  color: #13162D;
+  border-radius: 10px;
+  text-transform: capitalize;
+  max-width: 1015px;
+  min-width: 300px;
+  display: inline-block;
+  box-shadow: 5px 5px 10px #888888;
+}
+.cuchulainn__content h2 {
+  text-align: center;
+  font-size: 24px;
+}
+.cuchulainn__content p {
+  text-align: left;
+  font-size: 16px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+@media only screen and (min-width: 920px) {
+  .cuIMG {
+    max-width: 75%;
+  }
+  .cuchulainn__content h2 {
+    font-size: 32px;
+    text-align: center;
+  }
+  .cuchulainn__content p {
+    font-size: 18px;
+    text-align: left;
+  }
+}
+.WILLIXE {
+  height: 100%;
+  margin-top: 181px;
+  margin-inline: 172px;
+  display: grid;
+  place-content: center;
+  place-items: center;
+  grid-template-columns: auto;
+}
+
+.willixeIMG {
+  display: flex;
+  place-content: center;
+  place-items: center;
+  box-shadow: 5px 5px 10px #888888;
+}
+
+.willixe__content {
+  font-family: "Goudy Bookletter 1911", serif;
+  background-color: #443828;
+  margin: 16px;
+  padding: 18px;
+  color: whitesmoke;
+  border-radius: 10px;
+  text-transform: capitalize;
+  max-width: 1015px;
+  min-width: 300px;
+  display: inline-block;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.willixe__content h2 {
+  text-align: center;
+  font-size: 24px;
+}
+.willixe__content p {
+  text-align: left;
+  font-size: 16px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+@media only screen and (min-width: 920px) {
+  .willixeIMG {
+    max-width: 70%;
+  }
+  .willixe__content h2 {
+    font-size: 32px;
+    text-align: center;
+  }
+  .willixe__content p {
+    font-size: 18px;
+    text-align: left;
+  }
+}
+.gallery_section {
+  max-width: 946px;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+  margin: 180px auto 0;
+  place-content: center;
+  place-items: center;
+}
+.gallery_section .gallery__container {
+  max-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 86px 73px;
+  gap: 54px;
+  background: #EEEEEE;
+  border: 10px solid #9C2B1B;
+  border-radius: 18px;
+  margin: 32px;
+  box-shadow: 5px 5px 10px #888888;
+  transition: all 1s;
+}
+.gallery_section .gallery__container:hover img {
+  width: 235px;
+}
+.gallery_section .gallery__container h2 {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 38px;
+  text-transform: uppercase;
+  font-family: "Goudy Bookletter 1911", serif;
+}/*# sourceMappingURL=main.css.map */
