@@ -485,6 +485,7 @@ body {
 .CU {
   height: 100%;
   margin-top: 181px;
+  margin-bottom: 50px;
   margin-inline: 172px;
   display: grid;
   place-content: center;
