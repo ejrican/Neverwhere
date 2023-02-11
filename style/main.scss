@@ -467,9 +467,9 @@ body{
 
 //CSS FOR BROCC SECTION MOBILE 1ST
 .BROCC {
-  height: 100vh;
+  height: 100%;
   margin-top: 181px;
-  margin-bottom: 305px;
+  margin-bottom: 265px;
   margin-inline: 55px;
   display: grid;
   place-content: center;
@@ -549,15 +549,14 @@ body{
 
 //KAEL SECTION CSS
 .KAEL {
-  height: 100vh;
-  margin-top: 300px;
-  //margin-bottom: 305px;
+  height: 100%;
+  margin-top: 181px;
+  margin-bottom: 265px;
   margin-inline: 172px;
   display: grid;
   place-content: center;
   place-items: center;
   grid-template-columns: auto;
-  
 }
 
 .kaelIMG {
@@ -567,8 +566,6 @@ body{
   border: 2px solid black;
   box-shadow: 5px 5px 10px #888888;
   
-  
-  
 
 
 }
@@ -576,7 +573,6 @@ body{
   font-family: 'Goudy Bookletter 1911', serif;
   background-color: #10141c;
   margin: 16px;
-  margin-bottom: 180px;
   padding: 18px;
   color: whitesmoke;
   border-radius: 10px;
@@ -627,14 +623,13 @@ body{
 //START OF CUCHULAINN SECTION MOBILE 1ST VIEW
 .CU {
   height: 100%;
-  margin-top: 300px;
+  margin-top: 181px;
   margin-bottom: 360px;
   margin-inline: 172px;
   display: grid;
   place-content: center;
   place-items: center;
   grid-template-columns: auto;
-  
 }
 
 .cuIMG {
@@ -651,7 +646,6 @@ body{
   font-family: 'Goudy Bookletter 1911', serif;
   background-color: #889BD6;
   margin: 16px;
-  margin-bottom: 180px;
   padding: 18px;
   color: #13162D;
   border-radius: 10px;
@@ -705,13 +699,14 @@ body{
 
 .WILLIXE {
   height: 100%;
-  margin-top: 300px;
-  //margin-bottom: 380px;
+  margin-top: 141px;
+  margin-bottom: 380px;
   margin-inline: 172px;
   display: grid;
   place-content: center;
   place-items: center;
   grid-template-columns: auto;
+  
 }
 
 .willixeIMG {
@@ -728,7 +723,6 @@ body{
   font-family: 'Goudy Bookletter 1911', serif;
   background-color: #443828;
   margin: 16px;
-  margin-bottom: 180px;
   padding: 18px;
   color: whitesmoke;
   border-radius: 10px;
@@ -779,12 +773,11 @@ body{
 
 //CSS FOR IMAGE GALLERY
 .gallery_section {
-  margin-top: 280px;
   max-width: 946px;
-  height: 100vh;
+  height: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
-  margin: 280px auto 0;
+  margin: 180px auto 0;
   place-content: center;
   place-items: center;
 
