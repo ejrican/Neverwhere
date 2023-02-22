@@ -101,8 +101,7 @@ body {
   justify-content: space-evenly;
   height: 95px;
   z-index: 1;
-  width: 100%;
-  max-width: 1250px;
+  width: min(100%, 1250px);
 }
 .navbar .navbar__container .logo {
   margin-top: 13px;
@@ -367,8 +366,9 @@ body {
   }
 }
 .BROCC {
-  height: 100%;
+  height: auto;
   margin-top: 181px;
+  margin-bottom: 265px;
   margin-inline: 55px;
   display: grid;
   place-content: center;
@@ -429,8 +429,9 @@ body {
   }
 }
 .KAEL {
-  height: 100%;
+  height: auto;
   margin-top: 181px;
+  margin-bottom: 265px;
   margin-inline: 172px;
   display: grid;
   place-content: center;
@@ -483,9 +484,9 @@ body {
   }
 }
 .CU {
-  height: 100%;
+  height: auto;
   margin-top: 181px;
-  margin-bottom: 50px;
+  margin-bottom: 360px;
   margin-inline: 172px;
   display: grid;
   place-content: center;
@@ -538,8 +539,9 @@ body {
   }
 }
 .WILLIXE {
-  height: 100%;
-  margin-top: 181px;
+  height: auto;
+  margin-top: 141px;
+  margin-bottom: 380px;
   margin-inline: 172px;
   display: grid;
   place-content: center;
@@ -623,4 +625,11 @@ body {
   line-height: 38px;
   text-transform: uppercase;
   font-family: "Goudy Bookletter 1911", serif;
+}
+
+@media only screen and (max-width: 620px) {
+  .gallery__container {
+    width: 60vw;
+    height: 50vh;
+  }
 }/*# sourceMappingURL=main.css.map */

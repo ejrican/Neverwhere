@@ -125,8 +125,8 @@ body{
       justify-content:space-evenly;
       height: 95px;
       z-index: 1;
-      width: 100%;
-      max-width: 1250px;
+      width: min(100%, 1250px);
+      
       //border-bottom: 3px solid #9C2B1B;
       
       .logo {
@@ -812,3 +812,13 @@ body{
       }
   }
 }
+
+//START OF MEDIA QUERIE FOR GALLERY 
+@media only screen and (max-width: 620px) {
+
+  .gallery__container{
+    width: 60vw;
+    height: 50vh;
+  }
+}
+//END OF MEDIA QUERIE FOR GALLERY 
