@@ -89,7 +89,7 @@ body {
   align-items: center;
   background: url(../assets/PHB_background_texture.png);
   background-color: #f5e1da;
-  border-bottom: 3px solid #9C2B1B;
+  border-bottom: 3px solid #9c2b1b;
   position: fixed;
   top: 0;
   left: 0;
@@ -116,18 +116,19 @@ body {
   display: flex;
   justify-content: space-evenly;
   max-width: 400px;
+  width: 100%;
   height: 40px;
   z-index: 9999;
   transition: all 0.5s ease-in-out;
 }
 .story__nav .nav__container .nav__menu li {
-  margin: 1em;
-  padding: 1em;
+  margin: 0.8em;
+  padding: 0.8em;
   display: inline-block;
 }
 .story__nav .nav__container .nav__menu li a {
   font-size: clamp(0.7rem, 7vw, 1.3rem);
-  color: #9C2B1B;
+  color: #9c2b1b;
   text-align: center;
   width: 100%;
   display: flex;
@@ -141,18 +142,23 @@ body {
 }
 
 .storyboard {
-  margin-top: 145px;
+  margin-top: 135px;
   margin-inline: auto;
   max-width: 1200px;
-  background: #FFFFFF;
-  border-radius: 105px;
+  background: #ffffff;
+  border-radius: 50px;
   overflow-inline: auto;
   padding: 32px;
+  display: grid;
+  place-items: center;
+  gap: 10px;
 }
 .storyboard h1 {
   text-align: center;
   font-weight: 700;
   font-size: min(10vw, 66px);
+  color: #58180d;
+  font-family: "Cinzel Decorative", cursive;
 }
 .storyboard p {
   padding-bottom: 24px;
@@ -160,29 +166,35 @@ body {
   line-height: 1.3;
 }
 .storyboard .character__card {
-  max-width: 314px;
+  max-width: 100%;
   padding-inline: 50px;
   padding-top: 44px;
   padding-bottom: 12px;
-  border: 1px solid #9C2B1B;
+  border: 2px solid #9c2b1b;
 }
 .storyboard .character__card h2 {
   font-size: 1.2rem;
   text-align: center;
   margin-top: 21px;
 }
-.storyboard .left {
-  margin-right: 10px;
-  float: left;
-}
-.storyboard .right {
-  margin-left: 10px;
-  float: right;
-}
 
-@media only screen and (max-width: 485px) {
+@media only screen and (min-width: 493px) {
   .storyboard {
-    margin-top: 135px;
-    border-radius: 50px;
+    margin-top: 145px;
+    border-radius: 105px;
+    display: block;
+  }
+  .storyboard .character__card {
+    max-width: 300px;
+  }
+  .storyboard .left {
+    margin-right: 13px;
+    margin-bottom: 8px;
+    float: left;
+  }
+  .storyboard .right {
+    margin-left: 13px;
+    margin-bottom: 8px;
+    float: right;
   }
 }/*# sourceMappingURL=story.css.map */
