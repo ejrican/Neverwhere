@@ -155,6 +155,25 @@ body {
   place-content: center;
   place-items: center;
 }
+.video__section .content .playlist-button {
+  margin-top: 8px;
+  background-color: #58180d;
+  text-transform: uppercase;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 25px;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+.video__section .content .playlist-button:hover {
+  background-color: #9c2b1b;
+}
+.video__section .content .playlist-button a {
+  color: white;
+}
 .video__section .content h1 {
   text-align: center;
   font-weight: 700;
@@ -175,16 +194,33 @@ body {
   font-family: "Vesper Libre", serif;
 }
 
-.video__container {
+/* .video__container {
   margin-top: 80px;
-  width: max(560px, 50%);
-  height: max(315px, 50%);
-  border: 13px solid #58180d;
-}
-
-iframe {
+  width: clamp(106px, 90vw, 560px);
+  height: clamp(56px, 35vh, 350px);
+  border: 13px solid $storysectionheadcolor;
+} */
+/* iframe {
   height: 100%;
   width: 100%;
+  border: 0;
+  border: 6px groove $DNDFontColor;
+} */
+.video__container {
+  border: 13px solid #58180d;
+  overflow: hidden;
+  height: 50%;
+  width: clamp(106px, 90vw, 560px);
+  text-align: center;
+  font-size: 1.1rem;
+  color: whitesmoke;
+  background-color: black;
+}
+.video__container img {
+  width: 100%;
+  border: 0;
+  border: 6px groove #9c2b1b;
+  overflow: hidden;
 }
 
 @media only screen and (max-width: 915px) {
@@ -196,8 +232,15 @@ iframe {
     place-content: center;
     place-items: center;
   }
-  .video__container {
+  /*   .video__container {
     margin-top: 32px;
+  } */
+  .video__section {
+    margin-top: 32px;
+  }
+  .video__container {
+    margin-top: 16px;
+    height: 300px;
   }
 }
 @media only screen and (max-width: 586px) {
@@ -206,26 +249,24 @@ iframe {
   }
   .video__container {
     margin-top: 8px;
-    width: 400px;
-    height: 300px;
   }
 }
 @media only screen and (max-width: 414px) {
   .content {
     margin-bottom: 48px;
   }
-  .video__container {
-    width: 300px;
-    height: 280px;
+  .video__section {
+    margin-top: 72px;
   }
 }
 @media only screen and (max-width: 286px) {
-  .video__container {
+  /*   .video__container {
     width: 200px;
+  } */
+  .video__container {
+    width: 100%;
   }
   .logo {
     margin-top: 13px;
-    width: 106px;
-    height: 56px;
   }
 }/*# sourceMappingURL=episode.css.map */

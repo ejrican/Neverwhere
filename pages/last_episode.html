@@ -1,39 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Vesper+Libre&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style/episode.css" />
+    <title>NeverWhere: Last Episode</title>
+    <link rel="icon" type="image/x-icon" href="../assets/tree.ico" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Vesper+Libre&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="../style/episode.css" />
-  <title>NeverWhere: Last Episode</title>
-  <link rel="icon" type="image/x-icon" href="../assets/tree.ico" />
-</head>
-
-<body>
-  <div class="episode__nav">
-    <div class="nav__container">
-      <a href="../index.html" class="logo"><img src="../assets/Logo.svg" alt="LOGO" /></a>
-      <ul class="nav__menu">
-        <li><a href="../pages/story">Story</a></li>
-      </ul>
+  <body>
+    <div class="episode__nav">
+      <div class="nav__container">
+        <a href="../index" class="logo"
+          ><img src="../assets/Logo.svg" alt="LOGO"
+        /></a>
+        <ul class="nav__menu">
+          <li><a href="../pages/story">Story</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
-  <section class="video__section">
-    <div class="content">
-      <h1>Neverwhere</h1>
-      <h2>Episode feb192023</h2>
-      <h3>2 Large Wolves</h3>
-    </div>
-    <div class="video__container">
-      <iframe src="https://www.youtube.com/embed/igWkgYgCoMA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </div>
-  </section>
+    <section class="video__section">
+      <div class="content">
+        <h1>Neverwhere</h1>
+        <h2>Episode feb262023</h2>
+        <h3>Katherine's Revenge</h3>
+        <button class="playlist-button">
+          <a
+            href="https://youtube.com/playlist?list=PLQHgM4lZRcq0Osl272f-ItmNVL7mruGjn"
+            target="_blank"
+            >Previous Episodes</a
+          >
+        </button>
+      </div>
+      <div class="video__container">
+ <!--              <iframe src="https://www.youtube.com/watch?v=KKMQTaDhkxo" title="Katherine's Revenge" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
 
-</body>
-
+        <!-- USE this set up for when iFrame doesn't work or embed correctly -->
+        <p>Click Katherine to Start Last Week's Video</p>
+        <a href="https://www.youtube.com/watch?v=KKMQTaDhkxo" target="_blank"
+          ><img src="../assets/kathy.png" alt="Katherine"
+        /></a>
+      </div>
+    </section>
+  </body>
 </html>

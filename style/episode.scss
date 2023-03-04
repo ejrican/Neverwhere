@@ -183,6 +183,28 @@ body {
     place-content: center;
     place-items: center;
 
+    .playlist-button {
+      margin-top: 8px;
+      background-color: $storysectionheadcolor;
+      text-transform: uppercase;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 25px;
+      box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+
+      &:hover {
+        background-color: $DNDFontColor;
+      }
+
+      a {
+        color: white;
+      }
+    }
+
     h1 {
       text-align: center;
       font-weight: 700;
@@ -207,19 +229,43 @@ body {
   }
 }
 
-.video__container {
+//HIDE video container for the times YouTube doesn't embed the video and use the img css below
+/* .video__container {
   margin-top: 80px;
-  width: max(560px, 50%);
-  height: max(315px, 50%);
+  width: clamp(106px, 90vw, 560px);
+  height: clamp(56px, 35vh, 350px);
   border: 13px solid $storysectionheadcolor;
-}
+} */
 
-iframe {
+//HIDE iframe for the times YouTube doesn't embed the video and use the img css below
+/* iframe {
   height: 100%;
   width: 100%;
-}
+  border: 0;
+  border: 6px groove $DNDFontColor;
+} */
 
-//VIDEO SECTION MOBILE VIEW
+//for When YouTube forces me to use a picture b/c it won't embed the video hide top video container and iframe
+.video__container {
+  border: 13px solid $storysectionheadcolor;
+  overflow: hidden;
+  height: 50%;
+  width: clamp(106px, 90vw, 560px);
+  text-align: center;
+  font-size: 1.1rem;
+  color: whitesmoke;
+  background-color: black;
+
+  img {
+    width: 100%;
+    border: 0;
+    border: 6px groove $DNDFontColor;
+    overflow: hidden;
+  }
+}
+//end of the img and vid container adjustment for iframe youtube issues
+
+//VIDEO SECTION MEDIA QUERIES
 @media only screen and (max-width: 915px) {
   .content {
     margin-bottom: 48px;
@@ -230,20 +276,28 @@ iframe {
     place-items: center;
   }
 
-  .video__container {
+  /*   .video__container {
     margin-top: 32px;
+  } */
+
+  //for when Youtube makes me use a pic instead of embed use this vid container and section
+  .video__section {
+    margin-top: 32px;
+  }
+  .video__container {
+    margin-top: 16px;
+    height: 300px;
   }
 }
 
 @media only screen and (max-width: 586px) {
   .content {
+    //margin-top: 80px;
     margin-bottom: 48px;
   }
 
   .video__container {
     margin-top: 8px;
-    width: 400px;
-    height: 300px;
   }
 }
 
@@ -252,20 +306,24 @@ iframe {
     margin-bottom: 48px;
   }
 
-  .video__container {
-    width: 300px;
-    height: 280px;
+  //use this video section for when iframe doesn't embed or work
+  .video__section {
+    margin-top: 72px;
   }
 }
 
 @media only screen and (max-width: 286px) {
-  .video__container {
+  /*   .video__container {
     width: 200px;
+  } */
+
+  //for Youtube embed issues hide top and use this vid container
+  .video__container {
+    width: 100%;
   }
 
   .logo {
     margin-top: 13px;
-    width: 106px;
-    height: 56px;
   }
 }
+// END OF VIDEO SECTION MEDIA QUERIES
