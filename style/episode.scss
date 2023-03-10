@@ -230,23 +230,23 @@ body {
 }
 
 //HIDE video container for the times YouTube doesn't embed the video and use the img css below
-/* .video__container {
+.video__container {
   margin-top: 80px;
   width: clamp(106px, 90vw, 560px);
   height: clamp(56px, 35vh, 350px);
   border: 13px solid $storysectionheadcolor;
-} */
+}
 
 //HIDE iframe for the times YouTube doesn't embed the video and use the img css below
-/* iframe {
+iframe {
   height: 100%;
   width: 100%;
   border: 0;
   border: 6px groove $DNDFontColor;
-} */
+}
 
 //for When YouTube forces me to use a picture b/c it won't embed the video hide top video container and iframe
-.video__container {
+/* .video__container {
   border: 13px solid $storysectionheadcolor;
   overflow: hidden;
   height: 50%;
@@ -262,7 +262,7 @@ body {
     border: 6px groove $DNDFontColor;
     overflow: hidden;
   }
-}
+} */
 //end of the img and vid container adjustment for iframe youtube issues
 
 //VIDEO SECTION MEDIA QUERIES
@@ -276,23 +276,27 @@ body {
     place-items: center;
   }
 
-  /*   .video__container {
+  //HIDE VIDEO CONTAINER FOR WHEN YouTube bugs out use section below
+    .video__container {
     margin-top: 32px;
-  } */
+  }
 
   //for when Youtube makes me use a pic instead of embed use this vid container and section
-  .video__section {
+/*   .video__section {
     margin-top: 32px;
   }
   .video__container {
     margin-top: 16px;
     height: 300px;
-  }
+  } */
+
+  //End of pic instead of EMBED part
 }
 
 @media only screen and (max-width: 586px) {
   .content {
-    //margin-top: 80px;
+    //hide margin top for YouTube PIC ....UNHIDE for EMBED
+    margin-top: 80px;
     margin-bottom: 48px;
   }
 
@@ -307,20 +311,21 @@ body {
   }
 
   //use this video section for when iframe doesn't embed or work
-  .video__section {
+/*   .video__section {
     margin-top: 72px;
-  }
+  } */
 }
 
 @media only screen and (max-width: 286px) {
-  /*   .video__container {
+    .video__container {
     width: 200px;
-  } */
+  }
 
   //for Youtube embed issues hide top and use this vid container
-  .video__container {
+/*   .video__container {
     width: 100%;
-  }
+  } */
+  //End of YouTube PIC instead of EMbed
 
   .logo {
     margin-top: 13px;

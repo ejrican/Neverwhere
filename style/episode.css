@@ -194,20 +194,22 @@ body {
   font-family: "Vesper Libre", serif;
 }
 
-/* .video__container {
+.video__container {
   margin-top: 80px;
   width: clamp(106px, 90vw, 560px);
   height: clamp(56px, 35vh, 350px);
-  border: 13px solid $storysectionheadcolor;
-} */
-/* iframe {
+  border: 13px solid #58180d;
+}
+
+iframe {
   height: 100%;
   width: 100%;
   border: 0;
-  border: 6px groove $DNDFontColor;
-} */
-.video__container {
-  border: 13px solid #58180d;
+  border: 6px groove #9c2b1b;
+}
+
+/* .video__container {
+  border: 13px solid $storysectionheadcolor;
   overflow: hidden;
   height: 50%;
   width: clamp(106px, 90vw, 560px);
@@ -215,14 +217,14 @@ body {
   font-size: 1.1rem;
   color: whitesmoke;
   background-color: black;
-}
-.video__container img {
-  width: 100%;
-  border: 0;
-  border: 6px groove #9c2b1b;
-  overflow: hidden;
-}
 
+  img {
+    width: 100%;
+    border: 0;
+    border: 6px groove $DNDFontColor;
+    overflow: hidden;
+  }
+} */
 @media only screen and (max-width: 915px) {
   .content {
     margin-bottom: 48px;
@@ -232,19 +234,20 @@ body {
     place-content: center;
     place-items: center;
   }
-  /*   .video__container {
-    margin-top: 32px;
-  } */
-  .video__section {
-    margin-top: 32px;
-  }
   .video__container {
-    margin-top: 16px;
-    height: 300px;
+    margin-top: 32px;
   }
+  /*   .video__section {
+      margin-top: 32px;
+    }
+    .video__container {
+      margin-top: 16px;
+      height: 300px;
+    } */
 }
 @media only screen and (max-width: 586px) {
   .content {
+    margin-top: 80px;
     margin-bottom: 48px;
   }
   .video__container {
@@ -255,17 +258,17 @@ body {
   .content {
     margin-bottom: 48px;
   }
-  .video__section {
-    margin-top: 72px;
-  }
+  /*   .video__section {
+      margin-top: 72px;
+    } */
 }
 @media only screen and (max-width: 286px) {
-  /*   .video__container {
-    width: 200px;
-  } */
   .video__container {
-    width: 100%;
+    width: 200px;
   }
+  /*   .video__container {
+      width: 100%;
+    } */
   .logo {
     margin-top: 13px;
   }
